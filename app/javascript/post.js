@@ -1,9 +1,10 @@
-// ページ読み取り完了後に実行
-function post() {
-  console.log("非同期投稿を実装");
-}
+// フォームの投稿ボタンをクリックしたら、投稿したフォームの情報がコンソールに表示
+function post (){
+  const form = document.getElementById("form");
+  form.addEventListener("submit", (e) => {
+    console.log(document.getElementById("form"));
+    e.preventDefault();
+  });
+};
 
 window.addEventListener('turbo:load', post);
-
-// ファイルが読み取られたタイミングで実行
-// console.log("非同期投稿を実装");
