@@ -1,10 +1,8 @@
-// 文字を入力する要素を取得
-// その要素に何らかのキーボード操作があった場合に、イベントが発火
-// コンソールに表示
+// 入力した文字の数をコンソールに出力
 function count (){
   const articleText  = document.getElementById("article_text");
   articleText.addEventListener("keyup", () => {
-    console.log(articleText.value);
+    console.log(articleText.value.length);
   });
 };
 
