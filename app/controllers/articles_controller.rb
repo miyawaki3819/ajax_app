@@ -7,7 +7,9 @@ class ArticlesController < ApplicationController
   def new
   end
 
+  # フォームの投稿ボタンをクリックしたら、binding.pryで止まる
   def create
+    binding.pry
     article = Article.new(article_params)
     if article.save
       redirect_to index 
