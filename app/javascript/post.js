@@ -1,4 +1,4 @@
-// エラーがアラートとして表示
+// 投稿後、文字カウントが「0文字」と表示
 function post (){
   const form = document.getElementById("form");
   form.addEventListener("submit", (e) => {
@@ -21,6 +21,9 @@ function post (){
         </div>`;
       contentsArea.insertAdjacentHTML("afterbegin", HTML);
       articleText.value = "";
+
+      const charNum  = document.getElementById("char_num");
+      charNum.innerHTML = "0文字";
     };
     e.preventDefault();
   });
